@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <style>
+        .main {
+            display: flex;
+        }
+
+        .left,
+        .right {
+            width: 200px;
+            height: 500px;
+            border: 10px solid red;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="left" ondragover="allowDrag(event)" ondrop="drop(event)">
+            <p class="content" draggable="true" ondragstart="drag(event)" id="myData">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sint molestiae. Excepturi
+                explicabo iusto architecto omnis alias, fugiat quaerat voluptate officiis ab deleniti sapiente.
+                Aspernatur, alias. Ex eveniet autem voluptatem.
+            </p>
+        </div>
+        <div class="right" ondragover="allowDrag(event)" ondrop="drop(event)"></div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>
